@@ -1,0 +1,262 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Livvic:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0');
+
+// CSS reset
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+// Colors
+//  Primary
+$primaryGreen: #014E56;
+$primaryCoral: #F67E7E;
+$primaryWhite: #FFFFFF;
+
+//  Secondary
+$raptureBlue: #79C8C7;
+$policeBlue: #2C6269;
+$jungleGreen: #004047;
+$stateGreen: #012F34;
+$darkGreen: #002529;
+
+// Typography
+$fontName: "Livvic", sans-serif;
+
+%h1Large {
+    font-family: $fontName;
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 100px;
+}
+
+%h1Small {
+    font-family: $fontName;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 56px;
+}
+
+%h2 {
+    font-family: $fontName;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 48px;
+}
+
+%h3 {
+    font-family: $fontName;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+%body1 {
+    font-family: $fontName;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+%body2 {
+    font-family: $fontName;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.btn-primary {
+    border-radius: 50px;
+    border: 2px solid $primaryWhite;
+    color: $primaryWhite;
+    padding: 0.5rem;
+    text-align: center;
+
+    &:hover {
+        background-color: $primaryWhite;
+        color: $stateGreen;
+    }
+
+    &:disabled,
+    &-disabled {
+        opacity: 25%;
+    }
+}
+
+// Components
+
+//  Buttons
+
+.btn-primary-dark {
+    border-radius: 10px;
+    border: 2px solid $stateGreen;
+    color: $stateGreen;
+
+    &:hover {
+        background-color: $stateGreen;
+        color: $primaryWhite;
+    }
+
+    &:disabled,
+    &-disabled {
+        opacity: 25%;
+    }
+}
+
+.btn-secondary {
+    background-color: $primaryWhite;
+    border-radius: 10px;
+    border: 2px solid $primaryWhite;
+    color: $stateGreen;
+
+    &:hover {
+        background-color: $raptureBlue;
+        color: $stateGreen;
+    }
+
+    &:disabled,
+    &-disabled {
+        opacity: 25%;
+    }
+}
+
+//  Text Area
+.area {
+    min-height: 2.5rem;
+    border-bottom: 1px solid $primaryWhite;
+    color: $primaryWhite;
+    padding: 1rem;
+
+    &::placeholder {
+        @extend %body2;
+        color: $primaryWhite;
+        opacity: 60%;
+
+        &::first-letter {
+            text-transform: uppercase;
+        }
+    }
+
+    &:active {
+        border-bottom: 1px solid $raptureBlue;
+    }
+
+    &~.error-area:first-child {
+        display: none;
+    }
+
+    &:invalid,
+    &-invalid {
+        &::placeholder {
+            color: $primaryCoral;
+        }
+
+        border-bottom: 1px solid $primaryCoral;
+
+        &~.error-area:first-child {
+            display: block;
+            font-style: italic;
+            color: $primaryCoral;
+        }
+    }
+}
+
+//  Field
+.field {
+    padding: 1rem;
+    border-bottom: 1px solid $primaryWhite;
+
+    &::placeholder {
+        color: $primaryWhite;
+        opacity: 60%;
+    }
+
+    &:active {
+        border-bottom: 1px solid $raptureBlue;
+    }
+
+    &:invalid,
+    &-invalid {
+        &::placeholder {
+            color: $primaryCoral;
+        }
+
+        border-bottom: 1px solid $primaryCoral;
+
+        &~.error-field:first-child {
+            display: block;
+            font-style: italic;
+            color: $primaryCoral;
+        }
+    }
+}
+
+//  Menu
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+
+    h1 {
+        @extend %h2;
+        color: $primaryWhite;
+    }
+
+    &-mobile {
+        background-color: transparent;
+        border: none;
+        color: $primaryWhite;
+        font-size: 48px;
+        cursor: pointer;
+
+        &.active {
+            &~.navbar-menu-close {
+                display: block;
+            }
+
+            &~.navbar-menu {
+                display: flex;
+                left: 40%;
+            }
+        }
+    }
+
+    &-menu {
+        transition: all ease 1s;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        list-style: none;
+        top: 0%;
+        left: 100%;
+        height: 100vh;
+        width: 60%;
+        box-shadow: -20px 0px 15px -3px rgba(0, 0, 0, 0.1);
+        padding: 5rem 2.5rem;
+        gap: 1rem;
+        background: #014E56 url("/assets/bg-pattern-about-1-mobile-nav-1.svg") no-repeat bottom right -30vw;
+
+        & li a {
+            @extend %body1;
+            display: block;
+            color: $primaryWhite;
+            text-decoration: none;
+        }
+
+        &-close {
+            display: none;
+            z-index: 2;
+            position: absolute;
+            top: 10%;
+            left: 90%;
+            transform: translate(-50%, 50%);
+            color: $primaryWhite;
+            font-size: 24px;
+            cursor: pointer;
+        }
+    }
+}
