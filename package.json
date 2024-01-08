@@ -9,7 +9,11 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@jokay03j-v2/w3c-validator": "^2.2.5",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.33",
     "sass": "^1.69.7",
+    "tailwindcss": "^3.4.1",
     "vite": "^4.4.5"
   }
 }

@@ -1,14 +1,16 @@
-import "./css/base.scss";
 
 // navbar
-const mobileBtn = document.querySelector(".navbar-mobile");
-mobileBtn.addEventListener("click", handleNavbar)
+const closeBtn = document.getElementById("closeBtn");
+const openBtn = document.getElementById("openBtn");
+const navbar = document.getElementById("navbar");
 
-function handleNavbar() {
-    mobileBtn.classList.add("active");
+openBtn.addEventListener("click", handleOpen)
+closeBtn.addEventListener("click", handleClose);
 
-    mobileBtn.addEventListener("focusout", () => {
-        mobileBtn.classList.remove("active");
-        mobileBtn.removeEventListener("focusout", handleNavbar);
-    })
+function handleOpen() {
+    navbar.dataset["open"] = true;
+}
+
+function handleClose() {
+    navbar.dataset["open"] = false;
 }
