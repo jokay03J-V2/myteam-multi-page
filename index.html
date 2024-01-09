@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -7,24 +7,24 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <link rel="stylesheet" href="./index.css">
-  <meta name="description" content="multi page website">
-  <title>Multi Page Website</title>
+  <meta name="description" content="home page">
+  <title>myteam | home</title>
 </head>
 
 <body class="text-body2 font-primary bg-midnightGreen text-white">
   <header class="flex p-4 justify-between items-center w-full relative md:justify-normal md:gap-5">
     <h1 class="text-h2">myteam</h1>
-    <nav class="group/menu z-40 md:w-full" data-open id="navbar">
+    <nav class="group/menu z-40 md:relative md:w-full" data-open id="navbar">
       <img src="./assets/icon-hamburger.svg" alt="open menu" class="h-5 md:hidden" id="openBtn">
       <img src="./assets/icon-close.svg" alt="close menu"
         class="h-5 hidden group-data-[open=true]/menu:block md:group-data-[open=true]/menu:hidden z-50 absolute cursor-pointer md:hidden"
         id="closeBtn">
       <ul
-        class="hidden group-data-[open=true]/menu:flex flex-col p-16 text-h3 gap-6 absolute top-0 left-full -translate-x-full bg-midnightGreen h-screen w-3/4 bg-[url('./assets/bg-pattern-about-1-mobile-nav-1.svg')] bg-no-repeat bg-[bottom_right_-100%] md:flex md:bg-transparent md:h-fit md:w-full md:bg-none md:flex-row md:p-0 md:relative">
+        class="hidden group-data-[open=true]/menu:flex flex-col p-16 text-h3 gap-6 absolute top-0 left-full -translate-x-full bg-midnightGreen h-screen w-3/4 bg-[url('./assets/bg-pattern-about-1-mobile-nav-1.svg')] bg-no-repeat bg-[bottom_right_-100%] md:flex md:bg-transparent md:h-fit md:w-full md:bg-none md:flex-row md:p-0">
         <li class="md:w-fit"><a href="/" class="block">home</a></li>
         <li class="md:w-fit"><a href="./about.html" class="block">about</a></li>
         <li
-          class="p-2 border-white border-2 rounded-full md:absolute md:left-3/4 md:translate-x-1/4 md:top-2/4 md:-translate-y-2/4 md:w-fit">
+          class="p-2 border-white border-2 rounded-full md:absolute md:left-3/4 md:-translate-x-1/4 md:top-2/4 md:-translate-y-2/4 md:w-fit">
           <a href="./contact.html" class="block text-center">contact
             us</a>
         </li>
@@ -32,61 +32,67 @@
     </nav>
   </header>
   <main>
-    <section class="bg-no-repeat bg-[url('./assets/bg-pattern-home-2.svg')] bg-bottom pb-40">
-      <h2 class="flex flex-col items-center text-h2 mt-10 mb-5">
+    <section
+      class="bg-no-repeat bg-[url('./assets/bg-pattern-home-2.svg')] bg-bottom lg:bg-[90%_100%] pb-40 pt-10 lg:flex lg:items-end lg:justify-center lg:gap-28">
+      <h2 class="flex flex-col items-center text-h2 mb-5 lg:items-start lg:m-0">
         <span class="first-letter:uppercase">find the</span>
         <span>
           best <span class="text-lightCoral">talent</span>
         </span>
       </h2>
-      <p class="text-center text-body1">
+      <p class="text-center text-body1 lg:w-3/6 lg:text-start">
         Finding the right people and building high performing teams can be hard. Most companies aren’t tapping into the
         abundance of global talent. We’re about to change that.
       </p>
     </section>
-    <section class="bg-darkGreen px-8 py-9 bg-[url('./assets/bg-pattern-home-3.svg')] bg-no-repeat bg-[150%_0%]">
+    <section
+      class="bg-darkGreen px-8 py-9 bg-[url('./assets/bg-pattern-home-3.svg')] bg-no-repeat bg-[150%_0%] md:bg-[115%_0%] lg:flex lg:py-20">
       <h2
-        class="text-h2 w-4/6 my-20 relative first-letter:uppercase before:absolute before:w-16 before:h-1 before:top-0 before:left-0 before:bg-lightCoral before:-translate-y-10">
+        class="text-h2 w-4/6 my-20 relative first-letter:uppercase before:absolute before:w-16 before:h-1 before:top-0 before:left-0 before:bg-lightCoral before:-translate-y-10 md:w-5/6 lg:m-0">
         build & manage
         distributed
         teams like no one
         else.</h2>
       <ul class="w-full flex flex-col items-center gap-20">
-        <li class="w-full">
-          <article class="flex flex-col items-center w-full">
-            <img src="./assets/icon-person.svg" alt="person icon">
-            <h3 class="text-h3 text-lightCoral first-letter:uppercase">Experienced Individuals</h3>
-            <p class="text-center text-body2 w-5/6 first-letter:uppercase">our network is made up of highly experienced
+        <li class="md:w-full">
+          <article class="flex flex-col items-center w-full md:grid md:grid-cols-[5rem_1fr] md:grid-rows-2 md:gap-x-4">
+            <img src="./assets/icon-person.svg" alt="person icon" class="md:row-span-2 md:justify-self-start">
+            <h3 class="text-h3 text-lightCoral first-letter:uppercase md:w-full">Experienced Individuals</h3>
+            <p class="text-center text-body2 w-5/6 first-letter:uppercase md:w-full md:text-left">our network is made up
+              of highly
+              experienced
               professionals who are
               passionate about
               what they do.</p>
           </article>
         </li>
         <li class="w-full">
-          <article class="flex flex-col items-center w-full">
-            <img src="./assets/icon-cog.svg" alt="cog icon">
-            <h3 class="text-h3 text-lightCoral first-letter:uppercase">Easy to Implement</h3>
-            <p class="text-center text-body2 w-5/6 first-letter:uppercase">
+          <article class="flex flex-col items-center w-full md:grid md:grid-cols-[5rem_1fr] md:grid-rows-2 md:gap-x-4">
+            <img src="./assets/icon-cog.svg" alt="cog icon" class="md:row-span-2 md:justify-self-start">
+            <h3 class="text-h3 text-lightCoral first-letter:uppercase md:h-full">Easy to Implement</h3>
+            <p class="text-center text-body2 w-5/6 first-letter:uppercase md:w-full md:text-left">
               Our processes have been refined over years of implementation meaning our teams always deliver.
             </p>
           </article>
         </li>
         <li class="w-full">
-          <article class="flex flex-col items-center w-full">
-            <img src="./assets/icon-chart.svg" alt="chart icon">
+          <article class="flex flex-col items-center w-full md:grid md:grid-cols-[5rem_1fr] md:grid-rows-2 md:gap-x-4">
+            <img src="./assets/icon-chart.svg" alt="chart icon" class="md:row-span-2 md:justify-self-start">
             <h3 class="text-h3 text-lightCoral first-letter:uppercase">Enhanced Productivity</h3>
-            <p class="text-center text-body2 w-5/6 first-letter:uppercase">
+            <p class="text-center text-body2 w-5/6 first-letter:uppercase md:w-full md:text-left">
               Our customized platform with in-built analytics helps you manage your distributed teams.
             </p>
           </article>
         </li>
       </ul>
     </section>
-    <section class="pt-32 bg-no-repeat bg-[url('./assets/bg-pattern-home-4-about-3.svg')] bg-left-top">
-      <h2 class="text-h2 text-center mb-10">
+    <section
+      class="pt-32 bg-no-repeat bg-[url('./assets/bg-pattern-home-4-about-3.svg')] bg-left-top lg:flex lg:flex-col lg:items-center">
+      <h2 class="text-h2 text-center mb-10 lg:w-4/6">
         Delivering real results for top companies.
         Some of our <span class="text-raptureBlue">success stories.</span></h2>
-      <ul class="flex flex-col gap-7 pb-40 bg-[url('./assets/bg-pattern-home-5.svg')] bg-no-repeat bg-right-bottom">
+      <ul
+        class="flex flex-col gap-7 pb-40 bg-[url('./assets/bg-pattern-home-5.svg')] bg-no-repeat bg-right-bottom lg:flex-row">
         <li>
           <blockquote>
             <p
@@ -139,24 +145,24 @@
       </ul>
     </section>
     <section
-      class="bg-lightCoral flex flex-col items-center py-28 bg-[url('./assets/bg-pattern-home-6-about-5.svg')] bg-no-repeat bg-left-bottom">
+      class="bg-lightCoral flex flex-col items-center py-28 bg-[url('./assets/bg-pattern-home-6-about-5.svg')] bg-no-repeat bg-left-bottom md:flex-row md:justify-evenly">
       <h2 class="text-h2 text-center text-darkGreen first-letter:uppercase">ready to get started?</h2>
       <a href="./contact.html"
-        class="border-2 border-darkGreen py-2 px-4 rounded-full text-darkGreen mt-5 text-body1">contact
+        class="border-2 border-darkGreen py-2 px-4 rounded-full text-darkGreen mt-5 text-body1 md:m-0">contact
         us</a>
     </section>
   </main>
   <footer class="bg-darkGreen py-16 md:flex md:flex-wrap md:px-5">
-    <div class="md:flex md:flex-col md:w-3/12">
+    <div class="md:flex md:flex-col md:w-2/12">
       <h2 class="text-center text-h2 md:w-fit">myteam</h2>
       <nav>
-        <ul class="flex text-body1 justify-center gap-3 my-6 md:justify-between md:w-full">
+        <ul class="flex text-body1 justify-center gap-3 my-6 md:justify-evenly md:w-full">
           <li><a href="/">home</a></li>
           <li><a href="./about.html">about</a></li>
         </ul>
       </nav>
     </div>
-    <address class="flex flex-col items-center opacity-60 not-italic md:w-9/12 md:items-end">
+    <address class="flex flex-col items-center opacity-60 not-italic md:w-10/12 md:items-end">
       <div>987 Hillcrest Lane</div>
       <div>Irvine, CA</div>
       <div>California 92714</div>
