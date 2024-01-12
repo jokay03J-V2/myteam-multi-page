@@ -14,7 +14,7 @@
 <body class="text-body2 font-primary bg-midnightGreen text-white">
   <header class="flex p-4 justify-between items-center w-full relative md:justify-normal md:gap-5">
     <h1 class="text-h2">myteam</h1>
-    <nav class="group/menu z-40 md:relative md:w-full" data-open id="navbar">
+    <nav class="group/menu z-40 md:relative md:w-full" id="navbar">
       <img src="./assets/icon-hamburger.svg" alt="open menu" class="h-5 md:hidden" id="openBtn">
       <img src="./assets/icon-close.svg" alt="close menu"
         class="h-5 hidden group-data-[open=true]/menu:block md:group-data-[open=true]/menu:hidden z-50 absolute cursor-pointer md:hidden text-white"
@@ -24,7 +24,7 @@
         <li class="md:w-fit"><a href="/" class="block">home</a></li>
         <li class="md:w-fit"><a href="./about.html" class="block">about</a></li>
         <li
-          class="p-2 border-white border-2 rounded-full md:absolute md:left-3/4 md:-translate-x-1/4 md:top-2/4 md:-translate-y-2/4 md:w-fit">
+          class="p-2 border-white border-2 rounded-full transition-all hover:text-midnightGreen hover:bg-white md:absolute md:left-3/4 md:-translate-x-1/4 md:top-2/4 md:-translate-y-2/4 md:w-fit">
           <a href="./contact.html" class="block text-center">contact
             us</a>
         </li>
@@ -33,7 +33,7 @@
   </header>
   <main>
     <section
-      class="mt-16 pb-28 flex flex-col items-center gap-10 bg-[url('./assets/bg-pattern-about-1-mobile-nav-1.svg')] bg-no-repeat bg-[185%_170%] lg:flex-row lg:justify-center lg:items-start">
+      class="mt-16 pb-28 flex flex-col items-center gap-10 bg-[url('./assets/bg-pattern-about-1-mobile-nav-1.svg')] bg-no-repeat bg-[185%_170%] md:relative md:before:absolute md:before:top-full md:before:left-full md:before:bg-[url('./assets/bg-pattern-about-1-mobile-nav-1.svg')] md:before:-translate-y-full md:before:bg-[length:10rem] md:before:-translate-x-full md:before:w-20 md:before:h-40 lg:flex-row lg:justify-center lg:items-start">
       <h2 class="text-h2 first-letter:uppercase text-center mb-2 lg:m-0">about</h2>
       <p
         class="text-center first-letter:uppercase md:w-4/6 md:text-body1 lg:relative lg:text-start lg:before:h-1 lg:before:w-10 lg:before:bg-lightCoral lg:before:top-0 lg:before:absolute lg:before:-translate-y-5">
@@ -50,7 +50,7 @@
         bring those teams to you.</p>
     </section>
     <section
-      class="flex flex-col items-center bg-jungleGreen pt-28 bg-[url('./assets/bg-pattern-about-2-contact-1.svg')] bg-no-repeat bg-[-100%_-167%] bg-origin-border">
+      class="flex flex-col items-center bg-jungleGreen pt-28 bg-[url('./assets/bg-pattern-about-2-contact-1.svg')] bg-no-repeat bg-[-100%_-167%] bg-origin-border relative before:h-24 before:w-24 before:absolute before:top-0 before:left-0 before:bg-[url('./assets/bg-pattern-about-2-contact-1.svg')] before:bg-[length:12rem] before:bg-[100%_100%] md:before:bg-right md:before:h-48">
       <h2 class="text-h2 text-3xl first-letter:uppercase text-center mb-10">meet the directors</h2>
       <ul
         class="flex flex-col items-center w-full gap-10 pb-32 bg-[url('/assets/bg-pattern-home-4-about-3.svg')] bg-no-repeat bg-right-bottom md:grid md:grid-cols-2 md:w-5/6 lg:grid-cols-3 lg:grid-rows-2 lg:w-11/12">
@@ -87,7 +87,7 @@
               </li>
             </ul>
             <div
-              class="w-1/6 max-w-14 h-auto aspect-square rounded-full bg-lightCoral absolute top-full -translate-y-2/4 bg-[url('./assets/icon-cross.svg')] bg-center bg-no-repeat group-data-[open=true]/quote:bg-[url('./assets/icon-close-black.svg')]  group-data-[open=true]/quote:bg-raptureBlue">
+              class="w-1/6 max-w-14 h-auto aspect-square rounded-full bg-lightCoral absolute top-full -translate-y-2/4 bg-[url('./assets/icon-cross.svg')] bg-center bg-no-repeat group-data-[open=true]/quote:bg-[url('./assets/icon-close.svg')]  group-data-[open=true]/quote:bg-raptureBlue">
             </div>
           </article>
         </li>
@@ -106,7 +106,7 @@
               </li>
             </ul>
             <div
-              class="w-1/6 max-w-14 h-auto aspect-square rounded-full bg-lightCoral absolute top-full -translate-y-2/4 bg-[url('./assets/icon-cross.svg')] bg-center bg-no-repeat group-data-[open=true]/quote:bg-[url('./assets/icon-close-black.svg')]  group-data-[open=true]/quote:bg-raptureBlue">
+              class="w-1/6 max-w-14 h-auto aspect-square rounded-full bg-lightCoral absolute top-full -translate-y-2/4 bg-[url('./assets/icon-cross.svg')] bg-center bg-no-repeat group-data-[open=true]/quote:bg-[url('./assets/icon-close.svg')]  group-data-[open=true]/quote:bg-raptureBlue">
             </div>
           </article>
         </li>
@@ -125,7 +125,7 @@
               </li>
             </ul>
             <div
-              class="w-1/6 max-w-14 h-auto aspect-square rounded-full bg-lightCoral absolute top-full -translate-y-2/4 bg-[url('./assets/icon-cross.svg')] bg-center bg-no-repeat group-data-[open=true]/quote:bg-[url('./assets/icon-close-black.svg')]  group-data-[open=true]/quote:bg-raptureBlue">
+              class="w-1/6 max-w-14 h-auto aspect-square rounded-full bg-lightCoral absolute top-full -translate-y-2/4 bg-[url('./assets/icon-cross.svg')] bg-center bg-no-repeat group-data-[open=true]/quote:bg-[url('./assets/icon-close.svg')]  group-data-[open=true]/quote:bg-raptureBlue">
             </div>
           </article>
         </li>
@@ -143,7 +143,7 @@
               </li>
             </ul>
             <div
-              class="w-1/6 max-w-14 h-auto aspect-square rounded-full bg-lightCoral absolute top-full -translate-y-2/4 bg-[url('./assets/icon-cross.svg')] bg-center bg-no-repeat group-data-[open=true]/quote:bg-[url('./assets/icon-close-black.svg')]  group-data-[open=true]/quote:bg-raptureBlue">
+              class="w-1/6 max-w-14 h-auto aspect-square rounded-full bg-lightCoral absolute top-full -translate-y-2/4 bg-[url('./assets/icon-cross.svg')] bg-center bg-no-repeat group-data-[open=true]/quote:bg-[url('./assets/icon-close.svg')]  group-data-[open=true]/quote:bg-raptureBlue">
             </div>
           </article>
         </li>
@@ -161,13 +161,14 @@
               </li>
             </ul>
             <div
-              class="w-1/6 max-w-14 h-auto aspect-square rounded-full bg-lightCoral absolute top-full -translate-y-2/4 bg-[url('./assets/icon-cross.svg')] bg-center bg-no-repeat group-data-[open=true]/quote:bg-[url('./assets/icon-close-black.svg')]  group-data-[open=true]/quote:bg-raptureBlue">
+              class="w-1/6 max-w-14 h-auto aspect-square rounded-full bg-lightCoral absolute top-full -translate-y-2/4 bg-[url('./assets/icon-cross.svg')] bg-center bg-no-repeat group-data-[open=true]/quote:bg-[url('./assets/icon-close.svg')]  group-data-[open=true]/quote:bg-raptureBlue">
             </div>
           </article>
         </li>
       </ul>
     </section>
-    <section class="py-14 bg-stateGreen">
+    <section
+      class="py-14 bg-stateGreen relative before:absolute before:top-0 before:left-0 before:w-20 before:h-20 before:bg-[url('./assets/bg-pattern-about-4.svg')] before:bg-[length:10rem] before:bg-right-bottom md:before:w-40">
       <h2 class="text-h2 text-3xl text-center my-10 first-letter:uppercase">some of ours clients</h2>
       <ul class="flex flex-col items-center gap-7 md:flex-row md:px-5 md:justify-center">
         <li><img class="h-7 w-auto" src="./assets/logo-the-verge.png" alt="The Verge logo"></li>

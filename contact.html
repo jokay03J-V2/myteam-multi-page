@@ -14,7 +14,7 @@
 <body class="text-body2 font-primary bg-midnightGreen text-white">
   <header class="flex p-4 justify-between items-center w-full relative md:justify-normal md:gap-5">
     <h1 class="text-h2">myteam</h1>
-    <nav class="group/menu z-40 md:relative md:w-full" data-open id="navbar">
+    <nav class="group/menu z-40 md:relative md:w-full" id="navbar">
       <img src="./assets/icon-hamburger.svg" alt="open menu" class="h-5 md:hidden" id="openBtn">
       <img src="./assets/icon-close.svg" alt="close menu"
         class="h-5 hidden group-data-[open=true]/menu:block md:group-data-[open=true]/menu:hidden z-50 absolute cursor-pointer md:hidden text-white"
@@ -24,14 +24,15 @@
         <li class="md:w-fit"><a href="/" class="block">home</a></li>
         <li class="md:w-fit"><a href="./about.html" class="block">about</a></li>
         <li
-          class="p-2 border-white border-2 rounded-full md:absolute md:left-3/4 md:-translate-x-1/4 md:top-2/4 md:-translate-y-2/4 md:w-fit">
+          class="p-2 border-white border-2 rounded-full transition-all hover:text-midnightGreen hover:bg-white md:absolute md:left-3/4 md:-translate-x-1/4 md:top-2/4 md:-translate-y-2/4 md:w-fit">
           <a href="./contact.html" class="block text-center">contact
             us</a>
         </li>
       </ul>
     </nav>
   </header>
-  <main class="flex flex-col items-center pb-10 lg:flex-row lg:gap-0 lg:items-end lg:py-40 lg:justify-evenly">
+  <main
+    class="flex flex-col items-center pb-10 relative after:absolute after:w-14 after:h-20 after:bg-[length:8rem] after:bg-no-repeat after:top-full after:left-full after:-translate-x-full after:-translate-y-full after:bg-[url('./assets/bg-pattern-contact-2.svg')] md:after:h-36 md:before:absolute md:before:top-0 md:before:left-0 md:before:w-20 md:before:h-40 md:before:bg-right md:before:bg-[length:10rem] md:before:bg-[url('./assets/bg-pattern-about-2-contact-1.svg')] lg:flex-row lg:gap-0 lg:items-start lg:py-40 lg:justify-evenly">
     <section class="w-4/6 lg:flex lg:flex-col lg:w-fit">
       <h2 class="first-letter:uppercase text-h2 mt-20 mb-3 text-center lg:text-h1Large lg:m-0 lg:mb-16 lg:text-start">
         contact</h2>
