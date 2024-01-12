@@ -7,6 +7,11 @@ export default {
   ],
   theme: {
     extend: {
+      zIndex: {
+        "1": "1",
+        "2": "2",
+        "3": "3"
+      },
       fontFamily: {
         primary: ["Livvic", "sans-serif"]
       },
